@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestra de PDF con botón</title>
+    <style>
+        /* Estilos para el branding */
+        .branding {
+            background-color: #0066CC;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .branding img {
+            max-height: 50px; /* Ajusta según el tamaño deseado para el logo */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #0066CC;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function ejecutarProceso()  {
+            // Abrir una nueva ventana con la URL deseada
+            window.location.href ='https://certificacion.ecertchile.cl/PortalEmpresas/Login/LoginTemporal?token=6f88230005db446c2d990fd64dc4f8a2feb25b82&pin=6532';
+            // Puedes ajustar la URL y las dimensiones del pop-up como prefieras
+        }
+    </script>
+</head>
+<body>
+
+<!-- Branding en el encabezado -->
+<div class="branding">
+    <img src="C:\Users\jvaldes\OneDrive - Empresa Nacional de Certificación Electrónica S.A\Escritorio\Certificación\autofact\meta-image.png" alt="Logo de la empresa">
+</div>
+
+<div class="content">
+    <!-- Mostrar el PDF -->
+    <embed src="C:\Users\jvaldes\OneDrive - Empresa Nacional de Certificación Electrónica S.A\Escritorio\Certificación\autofact\Carta a firmar ecert.pdf" type="application/pdf" width="100%" height="500px">
+    
+    <!-- Botón para ejecutar el proceso -->
+    <button onclick="ejecutarProceso()">Firmar documento</button>
+</div>
+
+</body>
+</html>
