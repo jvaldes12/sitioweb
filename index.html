@@ -5,38 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Firma de Documento</title>
-    <!--<style>
-        /* Estilos para el branding */
-        .branding {
-            background-color: #0066CC;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .branding img {
-            max-height: 200px; /* Ajusta según el tamaño deseado para el logo */
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-        .content {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        button {
-            background-color: #0066CC;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>-->
+ <script>
+        // Credenciales predefinidas
+        const userName = 'USUAPI_163588080';
+        const password = '0E2OHqAYnf1Y08f';
+
+        // Configura la URL de la API
+        const apiUrl = 'https://certificacion.ecertchile.cl/PortalEmpresas/API/ApiGestor/Login/Authenticate';
+
+        // Datos que se enviarán a la API
+        const data = {
+            userName: userName,
+            password: password
+            // Puedes añadir más campos si la API lo requiere
+        };
+
+        fetch(apiUrl, {
+            method: 'POST', // Dependiendo de la API, puede ser POST, GET u otro método
+            headers: {
+                'Content-Type': 'application/json'
+                // Puedes necesitar configurar más cabeceras aquí según la API
+            },
+            body: JSON.stringify(data) // Envía los datos como JSON
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Error en la llamada a la API');
+            }
+        })
+        .then(data => {
+            // Muestra la respuesta en la página
+            document.getElementById('resultadoAPI').innerText = "Respuesta de la API: " + JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+            document.getElementById('resultadoAPI').innerText = 'Error al llamar a la API: ' + error;
+        });
+    </script>
     <script>
         function ejecutarProceso()  {
             // Abrir una nueva ventana con la URL deseada
