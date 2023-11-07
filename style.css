@@ -1,1 +1,29 @@
-
+ .branding {
+            background-color: #0066CC;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .branding img {
+            max-height: 200px; /* Ajusta según el tamaño deseado para el logo */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #0066CC;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
